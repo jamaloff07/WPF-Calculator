@@ -1,0 +1,474 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="540" Width="350">
+
+    <Grid  Background="#261F1F">
+        <Image Source="/images/hamburger.png" Width="20" Height="20" Margin="20,0,300,430"></Image>
+        <TextBlock Text="Standard" Foreground="White" FontSize="25" FontWeight="DemiBold"   Margin="50,17,0,55"  ></TextBlock>
+        <Image Source="/images/standart.jpg" Width="30" Height="30" Margin="45,0,0,430"></Image>
+        <Image Source="/images/refresh.jpg" Width="30" Height="30" Margin="280,0,0,430"></Image>
+        <TextBlock Text="0" FontSize="50" Foreground="White" FontWeight="DemiBold" Margin="295,75,0,130"></TextBlock>
+        <TextBlock Text="MC" FontSize="15" Foreground="Gray" Margin="20,140,10,100"></TextBlock>
+        <TextBlock Text="MR" FontSize="15" Foreground="Gray" Margin="75,140,190,100"></TextBlock>
+        <TextBlock Text="M+" FontSize="15" Foreground="White" Margin="138,140,0,0"></TextBlock>
+        <TextBlock Text="M-" FontSize="15" Foreground="White" Margin="188,140,0,0"></TextBlock>
+        <TextBlock Text="MS" FontSize="15" Foreground="White" Margin="238,140,0,0"></TextBlock>
+        <TextBlock Text="M" FontSize="15" Foreground="Gray" Margin="295,140,10,0"></TextBlock>
+        <TextBlock Text="⋁ " FontSize="10" Foreground="Gray" Margin="308,144,0,0"></TextBlock>
+        <StatusBar Background="Transparent" Margin="0,-7,0,7">
+
+            <Button Content="%" FontSize="20" Foreground="White" Width="70" Height="35" Margin="15,0,0,100">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="CE" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,0,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+
+            </Button>
+            <Button Content="C" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,0,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="⌫" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,0,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </StatusBar>
+
+
+        <StatusBar Background="Transparent" Margin="0,-7,0,7">
+
+            <Button Content="" FontSize="20" Foreground="White" Width="70" Height="35" Margin="15,97,0,100">
+
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <Image Source="/images/1.jpg" Width="30" Height="30"></Image>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                </Button.Style>
+
+
+
+            </Button>
+
+            <Button FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,97,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+
+                <StackPanel>
+                    <Image Source="/images/x^2.jpg" Width="35" Height="35"></Image>
+                </StackPanel>
+
+
+
+            </Button>
+
+            <Button Content="√a" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,97,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="÷" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,97,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StatusBar>
+
+
+        <StatusBar Background="Transparent" Margin="0,-7,0,7">
+
+            <Button Content="7" FontSize="20" Foreground="White" Width="70" Height="35" Margin="15,187,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="8" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,187,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="9" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,187,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="×" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,187,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StatusBar>
+
+        <StatusBar Background="Transparent" Margin="0,-7,0,7">
+
+            <Button Content="4" FontSize="20" Foreground="White" Width="70" Height="35" Margin="15,285,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="5" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,285,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="6" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,285,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+
+            </Button>
+            <Button Content="-" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,285,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </StatusBar>
+
+        <StatusBar Background="Transparent" >
+
+            <Button Content="1" FontSize="20" Foreground="White" Width="70" Height="35" Margin="15,360,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="2" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,360,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="3" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,360,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Content="+" FontSize="20" Foreground="White" Width="70" Height="35" Margin="0,360,0,100">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#373434">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+        </StatusBar>
+
+        <StatusBar Width="100" Height="50" Background="Transparent" Margin="242,349,0,0">
+            <Button Content="=" FontSize="20" Foreground="White" Width="70" Height="35">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#6B6464">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StatusBar>
+
+
+        <StatusBar Width="100" Height="50" Background="Transparent" Margin="-205,349,0,0">
+            <Button Content="" FontSize="20" Foreground="White" Width="70" Height="35">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#555151">
+                                        <Image Source="/images/plus.png" Width="20" Height="20"></Image>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </StatusBar>
+
+        <StatusBar Width="100" Height="50" Background="Transparent" Margin="-55,349,0,0">
+            <Button Content="0" FontSize="20" Foreground="White" Width="70" Height="35">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#6B6464">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StatusBar>
+
+
+        <StatusBar Width="100" Height="50" Background="Transparent" Margin="95,349,0,0">
+            <Button Content="." FontSize="20" Foreground="White" Width="70" Height="35">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#6B6464">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StatusBar>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+</Window>
